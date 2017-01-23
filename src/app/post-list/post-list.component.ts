@@ -11,12 +11,7 @@ export class PostListComponent {
   @Output() editPostFormSender = new EventEmitter();
   @Output() deletePostSender = new EventEmitter();
 
-  notesVisible: boolean = false;
-
-  toggleNotes() {
-    this.notesVisible = !this.notesVisible;
-  }
-  showEditPostForm(post) {
+  showEditForm(post) {
     this.editPostFormSender.emit(post);
   }
   deletePost(post) {

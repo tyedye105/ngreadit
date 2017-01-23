@@ -11,6 +11,8 @@ import { NoteListComponent } from './note-list/note-list.component';
 import { BoardPipe } from './board.pipe';
 import { NewPostComponent } from './new-post/new-post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { StopPropogationDirective } from './stop-propogation.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     NoteListComponent,
     BoardPipe,
     NewPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    PostDetailComponent,
+    StopPropogationDirective
   ],
   imports: [
     BrowserModule,
