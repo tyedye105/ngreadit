@@ -9,6 +9,7 @@ import { routing } from './app.routing';
 import { PostListComponent } from './post-list/post-list.component';
 import { NoteListComponent } from './note-list/note-list.component';
 import { BoardPipe } from './board.pipe';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BoardPipe } from './board.pipe';
     IndexComponent,
     PostListComponent,
     NoteListComponent,
-    BoardPipe
+    BoardPipe,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

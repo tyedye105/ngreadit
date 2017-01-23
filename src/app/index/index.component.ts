@@ -9,6 +9,7 @@ import { Post } from '../post.model';
 })
 export class IndexComponent {
   public board = "Random";
+  addPost = false;
   public boardList = [
     "Random",
     "Games"
@@ -26,4 +27,13 @@ export class IndexComponent {
   setBoard(board) {
     this.board = board;
   }
+
+  showAddForm(){
+    this.addPost = true;
+  }
+  createPost(newPost) {
+    this.posts.push(newPost);
+    this.addPost = false;
+  }
+
 }
