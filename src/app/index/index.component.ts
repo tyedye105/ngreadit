@@ -10,6 +10,7 @@ import { Post } from '../post.model';
 export class IndexComponent {
   public board = "Random";
   addPost = false;
+  editingPost = null;
   public boardList = [
     "Random",
     "Games"
@@ -35,5 +36,17 @@ export class IndexComponent {
     this.posts.push(newPost);
     this.addPost = false;
   }
+  showEditForm(post) {
+    this.editingPost = post;
+  }
 
+  doneEditing() {
+    this.editingPost = null;
+  }
+
+  deletePost(postToDelete) {
+    this.posts = this.posts.filter(function(post) {
+      return JSON.stringify(post) !== JSON.stringify(postToDelete);
+    });
+  }
 }

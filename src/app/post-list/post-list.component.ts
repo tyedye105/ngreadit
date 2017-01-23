@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Post } from '../post.model';
 
 @Component({
@@ -8,10 +8,18 @@ import { Post } from '../post.model';
 })
 export class PostListComponent {
   @Input() posts: Post[];
+  @Output() editPostFormSender = new EventEmitter();
+  @Output() deletePostSender = new EventEmitter();
 
   notesVisible: boolean = false;
 
   toggleNotes() {
     this.notesVisible = !this.notesVisible;
+  }
+  showEditPostForm(post) {
+    this.editPostFormSender.emit(post);
+  }
+  deletePost(post) {
+    this.deletePostSender.emit(post);
   }
 }

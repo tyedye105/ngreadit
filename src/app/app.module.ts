@@ -10,6 +10,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { NoteListComponent } from './note-list/note-list.component';
 import { BoardPipe } from './board.pipe';
 import { NewPostComponent } from './new-post/new-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewPostComponent } from './new-post/new-post.component';
     PostListComponent,
     NoteListComponent,
     BoardPipe,
-    NewPostComponent
+    NewPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

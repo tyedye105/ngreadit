@@ -6,5 +6,7 @@
     <span *ngIf="notesVisible">Hide Posts</span>
     <span *ngIf="!notesVisible">Show Posts</span>
   </button>
+  <button class="btn-info btn" (click)="showEditPostForm(post)">Edit</button>
+  <button class="btn-danger btn" (click)="deletePost(post)">Delete</button>
   <note-list [notes]="post.notes" *ngIf="notesVisible"></note-list>
 </div>
